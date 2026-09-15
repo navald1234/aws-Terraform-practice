@@ -12,3 +12,8 @@ output "public_dns" {
     value = aws_instance.app_server.public_dns
   
 }
+output "security_group_id" {
+    description = "security grp id"
+    value = aws_security_group.web_sg.id
+  
+}
