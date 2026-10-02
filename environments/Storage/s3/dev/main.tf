@@ -1,5 +1,5 @@
 module "s3_module" {
-source = "../../../../modules/Storage/S3"
+source = "../../../../modules/storage/s3"
 
 
 
@@ -7,4 +7,5 @@ source = "../../../../modules/Storage/S3"
 
   Environment = var.Environment
   bucket_tag = var.bucket_tag
+  aws_s3_bucket_versioning_status = var.aws_s3_bucket_versioning_status
 }
