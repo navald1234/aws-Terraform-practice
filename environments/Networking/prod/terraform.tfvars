@@ -2,9 +2,9 @@
 # VPC Variables specified
 # ------------------------------------------------------
 
-vpc_name = "dev-env-vpc"
+vpc_name = "prod-env-vpc"
 vpc_cidr = "10.0.0.0/16"
-Environment = "dev"
+Environment = "prod"
 enable_dns_hostnames = true
 enable_dns_support = true
 
@@ -23,9 +23,9 @@ public_subnet_03_cidr = "10.0.6.0/24"
 
 #igw specified
 
-igw_name = "${var.Environment}My-igw"
+igw_name = "${var.Environment}-My-igw"
 igw_route_cidr_range="0.0.0.0/0"
-igw_rt_name = "main-route-table"
+igw_rt_name = "${var.Environment}-main-route-table"
 
 # ------------------------------------------------------
 # private subnet specified
