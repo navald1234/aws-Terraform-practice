@@ -16,3 +16,12 @@ crash.*.log
 *.tfstate
 *.tfstate.*
 .terraform.lock.hcl
+
+# Ignore all AWS and SSH private keys
+*.pem
+*.ppk
+id_rsa
+id_ed25519
+
+# Specifically ignore the extensionless custom key
+custom-key
