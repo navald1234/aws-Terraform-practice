@@ -1,13 +1,21 @@
 resource "aws_acm_certificate" "cert" {
-  domain_name       = var.domain_name
-  validation_method = "DNS"
-  region = var.region
+    domain_name = var.domain_name
 
-  tags = {
-    Environment = "test"
-  }
+  subject_alternative_names = var.subject_alternative_names
+
+  validation_method = "DNS"
 
   lifecycle {
+
     create_before_destroy = true
   }
+
+  tags = merge(
+
+    var.common_tags,
+
+    {
+      Name = "${var.environment}-acm-certificate"
+    }
+  )
 }

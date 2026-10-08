@@ -1,2 +1,21 @@
-domain_name = "navald.online"
-region = "us-east-1"
+#################################################
+# ENVIRONMENT
+#################################################
+
+environment = "dev"
+
+#################################################
+# PROJECT
+#################################################
+
+project_name = "production-eks-platform"
+
+#################################################
+# ACM
+#################################################
+
+domain_name = "*.navald.online"
+
+root_domain = "navald.online"
+
+aws_region = "us-east-1"
