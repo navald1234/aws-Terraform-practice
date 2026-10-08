@@ -1,15 +1,13 @@
-variable "bucket_name" {
-  type = string
-}
+variable "aws_region" {}
 
-variable "Environment" {
- type = string
-}
+variable "Environment" {}
 
-variable "bucket_tag" {
-  type = string
-}
-variable "aws_s3_bucket_versioning_status" {
-  type = string
-  
-}
+variable "project_name" {}
+
+variable "bucket_name" {}
+
+variable "frontend_domain" {}
+
+ variable "hosted_zone_name" {}
+
+
